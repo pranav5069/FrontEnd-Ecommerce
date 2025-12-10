@@ -1,0 +1,156 @@
+.products-container {
+  padding: 24px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.products-container h1 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #111;
+  margin: 0 0 24px 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+.products-search-wrapper {
+  margin-bottom: 24px;
+  display: flex;
+  gap: 12px;
+}
+
+.products-search {
+  flex: 1;
+  max-width: 500px;
+  padding: 12px 16px;
+  border: 2px solid #e6e6e6;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.products-search::placeholder {
+  color: #999;
+}
+
+.products-search:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.products-search-btn {
+  padding: 12px 24px;
+  background: #667eea;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.products-search-btn:hover {
+  background: #5568d3;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.products-search-btn:active {
+  background: #4855b8;
+  transform: scale(0.98);
+}
+
+.products-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  align-items: start;
+}
+
+/* Tablet - Medium screens (768px and up) */
+@media (min-width: 768px) {
+  .products-container {
+    padding: 32px;
+  }
+
+  .products-container h1 {
+    font-size: 32px;
+    margin-bottom: 32px;
+  }
+
+  .products-search-wrapper {
+    margin-bottom: 32px;
+  }
+
+  .products-search {
+    max-width: 600px;
+    padding: 12px 16px;
+    font-size: 15px;
+  }
+
+  .products-search-btn {
+    padding: 12px 28px;
+    font-size: 15px;
+  }
+
+  .products-grid {
+    gap: 24px;
+  }
+}
+
+/* Desktop - Large screens (1024px and up) */
+@media (min-width: 1024px) {
+  .products-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 28px;
+  }
+}
+
+/* Extra large screens (1440px and up) */
+@media (min-width: 1440px) {
+  .products-container {
+    padding: 40px;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 32px;
+  }
+}
+
+/* Small screens (mobile, less than 640px) */
+@media (max-width: 639px) {
+  .products-container {
+    padding: 16px;
+  }
+
+  .products-container h1 {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+
+  .products-search-wrapper {
+    margin-bottom: 16px;
+  }
+
+  .products-search {
+    max-width: 100%;
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+
+
+  .products-search-btn {
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 16px;
+  }
+}
