@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { cartItems } from './Data';
 
-function TotalPrice({ cartItems = [] }) {
+function TotalPrice({ cartItems }) {
     let [totalCost, setTotalCost] = useState(0);
     let [afterDiscount, setAfterDiscount] = useState(0);
     let [role, setRole] = useState("");

@@ -4,6 +4,17 @@ import { combineReducers, createStore } from 'redux';
 
 
 function ProductReducer(state = products, action) {
+    switch(action.type){
+        case 'ADD_DATA':
+            let newItems = action.payload;
+            newItems.map((item1)=>{
+                let exists = state.some((item2)=>item1.id===item2.id);
+                exists ? state: state.push(item1);
+            })
+            return [...state];
+        default:
+            return state;
+    }
     return products;
 }
 

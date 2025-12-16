@@ -33,7 +33,7 @@ function Cart() {
 
 
 
-    const onPlusProduct = (id) => {
+    const  onQuantityIncrease = (id) => {
         dispatch({type:"INCREMENT_QUANTITY",payload:id});
         // setFinalCartItems(prevList=>prevList.map((item) => {
         //     dispatch({type:"UPDATE",payload:{...item, quantity: item.quantity + 1}})
@@ -42,7 +42,7 @@ function Cart() {
 
     }
 
-    const onMinusProduct = (id) => {
+    const  onQuantityDecrease = (id) => {
         dispatch({type:"DECREMENT_QUANTITY",payload:id});
 
 
@@ -87,9 +87,9 @@ function Cart() {
                                 <td><img src={item.image} alt={item.title} /></td>
                                 <td>{item.title}</td>
                                 <td className="qty-container">
-                                    <button className="qty-btn minus" onClick={() => onMinusProduct(item.id)}>-</button>
+                                    <button className="qty-btn minus" onClick={() => onQuantityDecrease(item.id)}>-</button>
                                     <span className="qty">{item.quantity}</span>
-                                    <button className="qty-btn plus" onClick={() => onPlusProduct(item.id)}>+</button>
+                                    <button className="qty-btn plus" onClick={() => onQuantityIncrease(item.id)}>+</button>
                                 </td>
                                 <td className="price">{item.price}</td>
                                 <td className="total-price">{item.totalPrice}</td>
